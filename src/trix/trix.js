@@ -25,7 +25,7 @@ const Trix = {
 
 // Expose models under the Trix constant for compatibility with v1
 Object.assign(Trix, models)
-
+//绑定trix编辑器的元素
 function start() {
   if (!customElements.get("trix-toolbar")) {
     customElements.define("trix-toolbar", elements.TrixToolbarElement)

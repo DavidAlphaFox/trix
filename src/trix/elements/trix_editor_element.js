@@ -24,7 +24,7 @@ const autofocus = function(element) {
     }
   }
 }
-
+//设置当前区域为可编辑
 const makeEditable = function(element) {
   if (element.hasAttribute("contenteditable")) {
     return
