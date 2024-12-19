@@ -8,7 +8,7 @@ import StringPiece from "trix/models/string_piece"
 import SplittableList from "trix/models/splittable_list"
 
 import Hash from "trix/core/collections/hash"
-
+//文本
 export default class Text extends TrixObject {
   static textForAttachmentWithAttributes(attachment, attributes) {
     const piece = new AttachmentPiece(attachment, attributes)

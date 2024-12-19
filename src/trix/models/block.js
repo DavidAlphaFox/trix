@@ -8,7 +8,7 @@ import {
   objectsAreEqual,
   spliceArray,
 } from "trix/core/helpers"
-
+//区块
 export default class Block extends TrixObject {
   static fromJSON(blockJSON) {
     const text = Text.fromJSON(blockJSON.text)

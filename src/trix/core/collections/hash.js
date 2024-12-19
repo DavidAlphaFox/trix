@@ -100,7 +100,7 @@ export default class Hash extends TrixObject {
     return { values: JSON.stringify(this.values) }
   }
 }
-
+//将Key和Value直接构建成Object
 const object = function(key, value) {
   const result = {}
   result[key] = value
@@ -118,8 +118,8 @@ const merge = function(object, values) {
 
 const copy = function(object, keyToRemove) {
   const result = {}
-  const sortedKeys = Object.keys(object).sort()
-
+  const sortedKeys = Object.keys(object).sort() //将Object中的Keys进行排序
+  //移除特定的Key
   sortedKeys.forEach((key) => {
     if (key !== keyToRemove) {
       result[key] = object[key]
@@ -128,7 +128,7 @@ const copy = function(object, keyToRemove) {
 
   return result
 }
-
+//打包成Hash
 const box = function(object) {
   if (object instanceof Hash) {
     return object
@@ -136,7 +136,7 @@ const box = function(object) {
     return new Hash(object)
   }
 }
-
+//解包内容
 const unbox = function(object) {
   if (object instanceof Hash) {
     return object.values

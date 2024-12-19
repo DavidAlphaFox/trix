@@ -1,9 +1,9 @@
 import TrixObject from "trix/core/object" // Don't override window.Object
 import Hash from "trix/core/collections/hash"
-
+// 条块
 export default class Piece extends TrixObject {
   static types = {}
-
+  //注册类型和构造器
   static registerType(type, constructor) {
     constructor.type = type
     this.types[type] = constructor
